@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4efe8;
+  --panel: #fffaf2;
+  --panel-border: #e5d9cb;
+  --ink: #21201d;
+  --muted: #6f6a62;
+  --brand-start: #134e5e;
+  --brand-end: #71b280;
+  --accent: #d3532a;
+  --accent-hover: #bc421d;
+  --control: #f9f3eb;
+  --control-border: #d5c8b8;
+}
+
+body {
+  font-family: "Manrope", "Avenir Next", sans-serif;
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(113, 178, 128, 0.28), transparent 25%),
+    radial-gradient(circle at 85% 20%, rgba(19, 78, 94, 0.16), transparent 22%),
+    var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(92deg, var(--brand-start), var(--brand-end));
+  color: white;
+  padding: 18px 22px;
+  box-shadow: 0 8px 24px rgba(19, 78, 94, 0.25);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand > img {
+  width: 36px;
+  height: 36px;
+}
+
+.brand > h1 {
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.header > p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.main-shell {
+  width: min(1060px, 92vw);
+  margin: 34px auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.panel,
+.meme-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(33, 32, 29, 0.08);
+}
+
+.panel {
+  padding: 20px;
+}
+
+.panel-heading h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+}
+
+.panel-heading p {
+  margin: 6px 0 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form input {
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid var(--control-border);
+  background: var(--control);
+  min-height: 44px;
+  font-family: inherit;
+  font-size: 0.98rem;
+  padding-inline: 10px;
+}
+
+.form input:focus {
+  outline: 2px solid rgba(19, 78, 94, 0.36);
+  border-color: #5d8e8f;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.actions button {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  min-height: 44px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.actions button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.actions button:first-child {
+  background: #174e61;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(23, 78, 97, 0.3);
+}
+
+.actions button.secondary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(211, 83, 42, 0.3);
+}
+
+.actions button.secondary:not(:disabled):hover {
+  background: var(--accent-hover);
+}
+
+.actions button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-text {
+  margin: 4px 0 0;
+  color: #9c2f14;
+  font-size: 0.88rem;
+}
+
+.meme-card {
+  padding: 16px;
+}
+
+.meme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme > img {
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  height: auto;
+  border-radius: 10px;
+}
+
+.meme span {
+  position: absolute;
+  text-align: center;
+  margin-block: 14px;
+  padding-inline: 5px;
+  font-family: impact, sans-serif;
+  font-size: clamp(1.35rem, 4.5vw, 2.5rem);
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.04em;
+  max-width: 95%;
+  word-break: break-word;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+.template-name {
+  margin: 12px 2px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-shell {
+    grid-template-columns: 1fr;
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-shell {
+    width: 94vw;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
