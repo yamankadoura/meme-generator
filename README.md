@@ -3,7 +3,6 @@
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Imgflip API](https://img.shields.io/badge/Imgflip-FF6B00?style=for-the-badge&logo=internetarchive&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![License](https://img.shields.io/badge/License-Portfolio%20Use-green?style=for-the-badge)
 
@@ -24,7 +23,7 @@ A modern meme generator built with React and Vite. Pick random templates, add cu
 ## Preview
 
 <p align="center">
-  <img src="./public/screenshot.png" alt="Meme Studio Editor" height="500">
+  <img src="./assets/screenshot.png" alt="Meme Studio Editor" height="500">
 </p>
 
 ---
@@ -149,10 +148,3 @@ npm run lint
 ## Notes
 
 - Meme templates are loaded from https://api.imgflip.com/get_memes.
-- Some external image hosts may block export due to browser CORS restrictions.
-
----
-
-## License
-
-This project is available for learning and portfolio use.
